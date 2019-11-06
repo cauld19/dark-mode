@@ -5,12 +5,7 @@ import useDarkMode from '../hooks/useDarkMode'
 const Navbar = (props) => {
   const [darkMode, setDarkMode] = useDarkMode(false);
 
-  // if (darkMode) {
-  //   props.setColor("#00f000")
-  // } else {
-  //   props.setColor ("f5f5f5")
-  // }
-  
+
 
 
 
@@ -20,7 +15,7 @@ const Navbar = (props) => {
     if (darkMode) {
       props.setColor(props.permColor)
     } else {
-      props.setColor("#f5f5f5")
+      props.setColor(props.newColor)
     }
   };
   

@@ -30,7 +30,7 @@ const Chart = ({ sparklineData, color }) => {
 
   return (
     <LineChart width={1100} height={300} data={formattedData}>
-      <Line type="monotone" dataKey="value" stroke={color} />
+      <Line type="monotone" dataKey="value" stroke={color}/>
       <CartesianGrid stroke="#ccc" strokeDasharray="5 5" />
       <XAxis dataKey="date" interval={3} />
       <YAxis />

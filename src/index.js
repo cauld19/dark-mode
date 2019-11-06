@@ -9,8 +9,10 @@ import "./styles.scss";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
-  const [permColor, setPermColor] = useState("#00f000")
-  const [color, setColor] = useState("#00f000")
+  const permColor = "#00f000"
+  const newColor = "#f5f5f5"
+
+  const [color, setColor] = useState(permColor)
 
   useEffect(() => {
     axios 
@@ -23,6 +25,7 @@ const App = () => {
   return (
     <div className="App">
       <Navbar 
+        newColor={newColor}
         permColor={permColor}
         setColor={setColor}
         color={color}
