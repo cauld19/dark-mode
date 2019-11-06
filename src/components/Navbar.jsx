@@ -1,23 +1,20 @@
 import React from 'react';
 import useDarkMode from '../hooks/useDarkMode'
 
-
-const Navbar = (props) => {
-  const [darkMode, setDarkMode] = useDarkMode(false);
+import Chart from "./Chart"
 
 
+const Navbar = ({ toggleMode, darkMode}) => {
+  // const [darkMode, setDarkMode] = useDarkMode(false);
 
 
 
-  const toggleMode = e => {
-    e.preventDefault();
-    setDarkMode(!darkMode);
-    if (darkMode) {
-      props.setColor(props.permColor)
-    } else {
-      props.setColor(props.newColor)
-    }
-  };
+
+
+  // const toggleMode = e => {
+  //   e.preventDefault();
+  //   setDarkMode(!darkMode);
+  // };
   
   return (
     <div>
