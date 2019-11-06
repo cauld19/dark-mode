@@ -9,6 +9,8 @@ import "./styles.scss";
 
 const App = () => {
   const [coinData, setCoinData] = useState([]);
+  const [permColor, setPermColor] = useState("#00f000")
+  const [color, setColor] = useState("#00f000")
 
   useEffect(() => {
     axios 
@@ -20,8 +22,15 @@ const App = () => {
   }, []);
   return (
     <div className="App">
-      <Navbar />
-      <Charts coinData={coinData} />
+      <Navbar 
+        permColor={permColor}
+        setColor={setColor}
+        color={color}
+      />
+      <Charts 
+        coinData={coinData}
+        color={color}
+      />
     </div>
   );
 };
