@@ -32,6 +32,14 @@ const App = () => {
     setColorMode(!colorMode)
   };
 
+  let tickColor;
+  if (colorMode) {
+    tickColor = "#ff6600"
+  } else {
+    tickColor = "#ccc"
+  }
+
+
 
   return (
     <div className="App">
@@ -43,6 +51,7 @@ const App = () => {
       <Charts 
         coinData={coinData}
         colorMode={colorMode}
+        tickColor={tickColor}
       />
     </div>
   );

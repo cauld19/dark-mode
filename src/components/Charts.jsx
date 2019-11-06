@@ -1,7 +1,7 @@
 import React from "react";
 import Chart from "./Chart";
 
-const Charts = ({ coinData, colorMode }) => {
+const Charts = ({ coinData, colorMode, tickColor }) => {
   return (
     <div className="charts">
       {coinData.map(coin => (
@@ -14,6 +14,7 @@ const Charts = ({ coinData, colorMode }) => {
           <Chart 
             sparklineData={coin.sparkline_in_7d.price}
             colorMode={colorMode}
+            tickColor={tickColor}
           />
         </div>
       ))}
